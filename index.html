@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      table, th, td {
+  border: 1px solid black;
+}
+  body{
+  height: 200px;
+  background-color: #89D1FE;
+}
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  </style>
+  </head>
+  
+  <body>
+    <center>
+    <h1 style="color:white">Stay Safe</h1>
+    <h2><i>Stay aware</i></h2>
+
+    <fieldset>
+      <legend><h3>EMERGENCY CONTACT NUMBERS</h3></legend>
+    
+  <label for="state">Choose your state/Union Territory: </label><br><br>
+<select name="simple" id="simple">
+  <option value="" selected><i>--Please Select--</i></option>
+  <option value="an">Andaman and Nicobar</option>
+  <option value="ap">Andhra Pradesh</option>
+  <option value="arun">Arunachal Pradesh</option>
+  <option value="assam">Assam</option>
+  <option value="bihar">Bihar</option>
+  <option value="chan">Chandigarh(UT)</option>
+  <option value="chat">Chhattisgarh</option>
+  <option value="danh">Dadra and Nagar Haveli (UT)</option>
+  <option value="dd">Daman and Diu (UT)</option>
+  <option value="delhi">Delhi</option>
+  <option value="goa">Goa</option>
+  <option value="guj">Gujarat</option>
+  <option value="har">Haryana</option>
+  <option value="hp">Himachal Pradesh</option>
+  <option value="jak">Jammu and Kashmir</option>
+  <option value="jk">Jharkhand</option>
+  <option value="ka">Karnataka</option>
+  <option value="kerala">Kerala</option>
+  <option value="ld">Lakshadweep (UT)</option>
+  <option value="mp">Madhya Pradesh</option>
+  <option value="maha">Maharashtra</option>
+  <option value="mani">Manipur</option>
+  <option value="megh">Meghalaya</option>
+  <option value="mizo">Mizoram</option>
+  <option value="naga">Nagaland</option>
+  <option value="ori">Odisha</option>
+  <option value="pudu">Puducherry (UT)</option>
+  <option value="pun">Punjab</option>
+  <option value="raja">Rajasthan</option>
+  <option value="sik">Sikkim</option>
+  <option value="tn">Tamil Nadu</option>
+  <option value="tel">Telangana</option>
+  <option value="tri">Tripura</option>
+  <option value="up">Uttar Pradesh</option>
+  <option value="ut">Uttarakhand</option>
+  <option value="wb">	West Bengal</option>
+
+</select><br><br>
+<div id="an" class="state" style="display:none"><i>Andaman and Nicobar helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>STD</td>
+    <td>03192</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+</table>
+</div>
+
+<div id="ap" class="state" style="display:none"><i>Andhra Pradesh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Centralised helpline number</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+</table>
+</div>
+
+<div id="arun" class="state" style="display:none"><i>Arunachal helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Nirbhaya Helpline</td>
+    <td>1400</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+</table>
+</div>
+
+<div id="assam" class="state" style="display:none"><i>Assam helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 , 9345215029, 0361-2521242</td>
+</table>
+</div>
+
+<div id="bihar" class="state" style="display:none"><i>Bihar helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>18003456247/ 0612-2320047/9304264570 / 0612-2214318</td>
+</table>
+</div>
+
+<div id="chan" class="state" style="display:none"><i>Chandigarh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100, 2749194, 2723444</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091, 2705011</td>
+</table>
+</div>
+
+<div id="chat" class="state" style="display:none"><i>Chhatisgarh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 0771-2424404</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+</table>
+</div>
+
+<div id="danh" class="state" style="display:none"><i>Dadra and Nagar Haveli helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+  <tr>
+    <td>Emergency</td>
+    <td>112</td>
+  </tr>
+</table>
+</div>
+
+<div id="dd" class="state" style="display:none"><i>Daman and Diu helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 ,0260-2220015</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>108 / 102</td>
+    </tr>
+</table>
+</div>
+
+<div id="delhi" class="state" style="display:none"><i>Delhi helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181, 1091</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+    </tr>
+</table>
+</div>
+
+<div id="goa" class="state" style="display:none"><i>Goa helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>STD</td>
+    <td>0832</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>108 / 102</td>
+    </tr>
+</table>
+</div>
+
+<div id="guj" class="state" style="display:none"><i>Gujarat helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 / 1091</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>108 / 0261-2414139 / 2414195</td>
+    </tr>
+</table>
+</div>
+
+<div id="har" class="state" style="display:none"><i>Haryana helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Centralised Emergency number</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 2782457</td>
+    </tr>
+</table>
+</div>
+
+<div id="hp" class="state" style="display:none"><i>Himachal Pradesh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 108/td>
+    </tr>
+</table>
+</div>
+
+<div id="jak" class="state" style="display:none"><i>Jammu and Kashmir helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Centralised Emergency number</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 108</td>
+    </tr>
+</table>
+</div>
+
+<div id="jk" class="state" style="display:none"><i>Jharkhand helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Centralised Emergency number</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 / 9771432103</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 2782457</td>
+    </tr>
+</table>
+</div>
+
+<div id="ka" class="state" style="display:none"><i>Karnataka helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 / 080-25251929</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 2782457</td>
+    </tr>
+</table>
+</div>
+
+<div id="kerala" class="state" style="display:none"><i>Kerala helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 / 0471-324</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+  <tr>
+    <td>Crime stopper</td>
+    <td>1090</td>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+    </tr>
+</table>
+</div>
+
+<div id="ld" class="state" style="display:none"><i>Lakshadweep helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 / 04896-263100</td>
+  </tr>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="mp" class="state" style="display:none"><i>Madhya Pradesh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 / 04896-263100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1090 / 1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="maha" class="state" style="display:none"><i>Maharashtra helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 022-22621855</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 , 1298 , 022-24308888</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>022-22633333 , 22620111</td>
+  </tr>
+</table>
+</div>
+
+<div id="mani" class="state" style="display:none"><i>Manipur helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 / 04896-263100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102 / 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1090 / 1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="megh" class="state" style="display:none"><i>Meghalaya helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100  / 2224400 / 2222277</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>108 / 2224100/ 2223889</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="mizo" class="state" style="display:none"><i>Mizoram helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+</table>
+</div>
+
+<div id="naga" class="state" style="display:none"><i>Nagaland helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 0370-2902068 </td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+</table>
+</div>
+
+<div id="ori" class="state" style="display:none"><i>Odisha helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 112 </td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 , 1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="pudu" class="state" style="display:none"><i>Puducherry helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 ,2334243-47 </td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 108 , 2336050</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181 , 1091 , 2336178</td>
+  </tr>
+</table>
+</div>
+
+<div id="pun" class="state" style="display:none"><i>Punjab helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 112 </td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="raja" class="state" style="display:none"><i>Rajasthan helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 0141-2619725</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1090 , 1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="sik" class="state" style="display:none"><i>Sikkim helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 202001</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+</table>
+</div>
+
+<div id="tn" class="state" style="display:none"><i>Tamil Nadu helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="tel" class="state" style="display:none"><i>Telengana helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+</table>
+</div>
+
+<div id="tri" class="state" style="display:none"><i>Tripura helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1091</td>
+  </tr>
+</table>
+</div>
+
+<div id="up" class="state" style="display:none"><i>Uttar Pradesh helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>112</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102, 108</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1090</td>
+  </tr>
+</table>
+</div>
+
+<div id="ut" class="state" style="display:none"><i>Uttarakhand helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Ambulance</td>
+    <td>102</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>1090</td>
+  </tr>
+</table>
+</div>
+
+<div id="wb" class="state" style="display:none"><i>West Bengal helpline numbers:</i>
+<br><br>
+<table>
+  <tr>
+    <td style="background-color:grey">Title</td>
+    <td style="background-color:grey">Contact number</td>
+  </tr>
+  <tr>
+    <td>Police</td>
+    <td>100 , 033-22144031 / 1946</td>
+  </tr>
+  <tr>
+    <td>CMO</td>
+    <td>+91-033-23341563</td>
+  <tr>
+    <td>Women helpline</td>
+    <td>181</td>
+  </tr>
+</table>
+</div>
+
+
+</center>
+<script>
+
+    $(function() {
+        $('#simple').change(function(){
+            $('.state').hide();
+            $('#' + $(this).val()).show();
+    });
+ // Can also use .prop("action", action + ".php"); 
+});
+</script>
+</fieldset>
+<br><br>
+<fieldset>
+  
+  <legend><h3>SENDING SOS NOW MADE EASY!</h3></legend>
+  <p><i>This app helps you to share your location at the click of a button</i>
+  <br>
+
+<div class="slideshow-container">
+  <center>
+  
+
+<div class="mySlides fade" >
+  <div class="numbertext">1 / 4</div>
+  <img src="figma_screen1.jpg">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="figma_screen2.jpg" >
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="figma_screen3.jpg" >
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="figma_screen4.jpg">
+  
+  </center>
+  
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)"></a>
+<a class="next" onclick="plusSlides(1)"></a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+
+ 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<center>
+  <br><br>
+  Coming soon on Google Play<br><br>
+  <div class="try">
+    <a href="https://github.com/Ruchi-23/HackViolet.git" target="_blank">Try it out here</a>
+  </div>
+
+</center>
+</fieldset><br><br>
+
+<fieldset>
+  <legend><h3>WHO ARE WE AND WHAT IS OUR VISION?</h3></legend>
+  <p><i> We (Ruchira Saha and Astha Patel) are a team of two women from India, who want all our fellow women to be safe, independent, self-aware and self-reliant. Both of us are undergraduate students, pursuing Data Science and Programming.<br><br> India has 28 states and 8 union territories. Each state has its own set of emergency contact numbers. Many of us aren't aware of the emergency contact numbers of the individual states. This website was created with a view to educate everyone about the same.
+  <br><br>
+  The app "You are safe" was created by us to enable women to send their location to their trusted contact numbers when they feel unsafe. It has been observed in a case study funded by Ministry of Women and Child Development, Government of India, that most of the cases of violence generally happen during the day in which the woman is out of the home, alone for livelihood activities, without no family members being around.This app will ensure that they receive assistance(if needed) at the earliest and thus, help to bring down the cases of crime against women</i>
+
+  
+</body>
+
+
+
+</html>
